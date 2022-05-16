@@ -3,7 +3,7 @@
 
 Getting Started
 
-clone https://github.com/sheeraz21/baraka-app.git
+git clone https://github.com/sheeraz21/baraka-app.git
 
 ## After cloning run the below command to up the application.
 mvn clean install
