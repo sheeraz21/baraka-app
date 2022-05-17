@@ -12,6 +12,10 @@ docker image build -t baraka-app .
 
 docker container run --name baraka-app -p 8080:8080 -d baraka-app
 
+## Rest API 
+
+http://localhost:8080/api/v1/candles/EES
+
 
 
  
