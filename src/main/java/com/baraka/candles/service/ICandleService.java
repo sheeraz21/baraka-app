@@ -5,7 +5,6 @@ import java.util.List;
 import com.baraka.candles.dto.CandleList;
 import com.baraka.candles.dto.StockDetailsValue;
 
-
 public interface ICandleService {
 
 	public List<CandleList> getCandleMessageData();

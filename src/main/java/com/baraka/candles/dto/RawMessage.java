@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 "type"
 })
 @Generated("jsonschema2pojo")
-public class Example {
+public class RawMessage {
 
 @JsonProperty("data")
 private List<CandleList> data = null;
@@ -56,7 +56,7 @@ public boolean equals(Object obj) {
 		return false;
 	if (getClass() != obj.getClass())
 		return false;
-	Example other = (Example) obj;
+	RawMessage other = (RawMessage) obj;
 	return Objects.equals(data, other.data) && Objects.equals(type, other.type);
 }
 

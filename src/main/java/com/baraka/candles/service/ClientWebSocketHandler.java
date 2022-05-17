@@ -13,7 +13,7 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import com.baraka.candles.dto.CandleList;
-import com.baraka.candles.dto.Example;
+import com.baraka.candles.dto.RawMessage;
 import com.baraka.candles.entity.MessageEntity;
 import com.baraka.candles.repo.ICandleMessageRepo;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class ClientWebSocketHandler extends TextWebSocketHandler {
 	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(ClientWebSocketHandler.class);
-	Example data;
+	RawMessage data;
 	List<CandleList> FinalList = new ArrayList<CandleList>();
 	Date dte = new Date();
 
@@ -50,7 +50,7 @@ public class ClientWebSocketHandler extends TextWebSocketHandler {
 		String messageInfo = message.getPayload();
 		ObjectMapper objectMapper = new ObjectMapper();
 
-		data = objectMapper.readValue(messageInfo, Example.class);
+		data = objectMapper.readValue(messageInfo, RawMessage.class);
 
 		for (CandleList stockData : data.getData()) {
 
@@ -71,11 +71,11 @@ public class ClientWebSocketHandler extends TextWebSocketHandler {
 		logger.info("Client transport error: {}", exception.getMessage());
 	}
 
-	public Example getData() {
+	public RawMessage getData() {
 		return data;
 	}
 
-	public void setData(Example data) {
+	public void setData(RawMessage data) {
 		this.data = data;
 	}
 

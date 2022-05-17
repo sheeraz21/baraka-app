@@ -15,7 +15,6 @@ import com.baraka.candles.processor.ICandlesProcessor;
 import com.baraka.candles.repo.ICandleMessageRepo;
 import com.baraka.candles.repo.ICandleRepo;
 
-
 @Service
 public class CandleServiceImpl implements ICandleService {
 
@@ -53,7 +52,6 @@ public class CandleServiceImpl implements ICandleService {
 		Date dte = new Date();
 		List<StockDetailsValue> list = candlesProcessor.getStockDetails(lst);
 		for (StockDetailsValue entity : list) {
-
 			messageEntity.setHighestPrice(entity.getHighValue());
 			messageEntity.setLowestPrice(entity.getLowValue());
 			messageEntity.setClosePrice(entity.getClose());

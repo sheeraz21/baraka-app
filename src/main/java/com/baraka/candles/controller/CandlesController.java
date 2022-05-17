@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.baraka.candles.dto.StockDetailsValue;
 import com.baraka.candles.service.ICandleService;
 
-
 @RestController()
 @RequestMapping("api")
 public class CandlesController {
