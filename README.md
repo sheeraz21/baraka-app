@@ -14,7 +14,9 @@ docker container run --name baraka-app -p 8080:8080 -d baraka-app
 
 ## Rest API 
 
-http://localhost:8080/api/v1/candles/EES
+http://localhost:8080/api/v1/candles/{symbol}
+
+Sample Request : http://localhost:8080/api/v1/candles/EES
 
 
 
